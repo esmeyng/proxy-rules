@@ -1,0 +1,32 @@
+# ========================================================
+# Meta Muse & Meta AI 专属规则集 (绑定美国节点)
+# 作用：保障 Muse 完整交互、流式输出与美区鉴权，不影响日常日区社交
+# ========================================================
+
+# --- 1. Muse 核心页面与 Meta AI 主站 ---
+DOMAIN-SUFFIX,ai.meta.com
+DOMAIN-SUFFIX,meta.ai
+
+# --- 2. Meta 账号鉴权中心 (防跳区与 SSO 登录) ---
+DOMAIN,auth.meta.com
+DOMAIN,account.meta.com
+DOMAIN,accounts.meta.com
+DOMAIN,secure.meta.com
+DOMAIN,login.meta.com
+
+# --- 3. 底层 API、网关与流式响应通道 ---
+DOMAIN,graph.meta.com
+DOMAIN,gateway.meta.com
+DOMAIN,gateway.meta.ai
+DOMAIN,api.meta.ai
+DOMAIN,edge.meta.ai
+
+# --- 4. 专属静态资源 (不含通用 FB/IG CDN，防污染日常网络) ---
+DOMAIN,static.meta.com
+DOMAIN,assets.meta.com
+
+# --- 5. 关键词兜底 (捕获包含 muse 的特定动态子域名) ---
+DOMAIN-KEYWORD,muse
+
+# --- 6. 消费与支付闭环 (Muse 深度集成的 Stripe Link) ---
+DOMAIN-SUFFIX,link.com
